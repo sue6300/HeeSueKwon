@@ -17,10 +17,15 @@
             shuffledFonts = shuffle([...fontType]);
         }
         
+        // "kom-*" fonts carry Latin only, so Korean text falls back to "as" (as-serif)
+        function withFallback(font) {
+            return font === "as" ? '"as"' : '"' + font + '", "as"';
+        }
+
         // Assign fonts to div elements
-        document.getElementById("menu-1").style.fontFamily = shuffledFonts[0];
-        document.getElementById("menu-2").style.fontFamily = shuffledFonts[1];
-        document.getElementById("menu-3").style.fontFamily = shuffledFonts[2];
-        document.getElementById("menu-4").style.fontFamily = shuffledFonts[3];
-        document.getElementById("menu-5").style.fontFamily = shuffledFonts[4];
-        document.getElementById("menu-6").style.fontFamily = shuffledFonts[5];
+        document.getElementById("menu-1").style.fontFamily = withFallback(shuffledFonts[0]);
+        document.getElementById("menu-2").style.fontFamily = withFallback(shuffledFonts[1]);
+        document.getElementById("menu-3").style.fontFamily = withFallback(shuffledFonts[2]);
+        document.getElementById("menu-4").style.fontFamily = withFallback(shuffledFonts[3]);
+        document.getElementById("menu-5").style.fontFamily = withFallback(shuffledFonts[4]);
+        document.getElementById("menu-6").style.fontFamily = withFallback(shuffledFonts[5]);
