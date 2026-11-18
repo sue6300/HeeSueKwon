@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Jost:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500;600&display=swap');
+/* ---------- self-hosted typefaces ---------- */
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("../fonts/source-serif-4-var.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("../fonts/source-serif-4-italic.woff2") format("woff2");font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Jost";src:url("../fonts/jost-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Serif KR";src:url("../fonts/noto-serif-kr-300.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Serif KR";src:url("../fonts/noto-serif-kr-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Serif KR";src:url("../fonts/noto-serif-kr-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+
 
 :root{
   --ink:#141413;
@@ -33,6 +42,21 @@ a{color:inherit}
 html.lang-ko .en{display:none !important}
 html.lang-en .ko{display:none !important}
 
+/* Korean type: the serif takes over the small-caps label roles, without synthetic slant */
+html.lang-ko .section-label{font-family:var(--text);font-size:.86rem;letter-spacing:.04em;text-transform:none}
+html.lang-ko .section-label span{font-family:var(--text);letter-spacing:.04em}
+html.lang-ko .section-more{font-family:var(--text);font-size:.85rem;letter-spacing:.02em;text-transform:none}
+html.lang-ko .chip{font-family:var(--text);font-size:.82rem;letter-spacing:.02em;text-transform:none}
+html.lang-ko .meta,html.lang-ko .work-head .meta{font-family:var(--text);font-size:.95rem;letter-spacing:.01em;text-transform:none;line-height:1.7}
+html.lang-ko .work-head .kicker{font-family:var(--text);font-size:.82rem;letter-spacing:.06em}
+html.lang-ko .hero-caption{font-family:var(--text);font-size:.85rem;letter-spacing:.01em;text-transform:none}
+html.lang-ko .tags li{font-family:var(--text);font-size:.85rem;letter-spacing:.01em}
+html.lang-ko .credits li strong{font-family:var(--text);font-size:.85rem;letter-spacing:.02em;text-transform:none}
+html.lang-ko .prose h2{font-family:var(--text);font-size:.9rem;letter-spacing:.04em;text-transform:none}
+html.lang-ko .page-head .kicker,html.lang-ko .pager span{font-family:var(--text);font-size:.82rem;letter-spacing:.06em}
+html.lang-ko .card .sub,html.lang-ko .quote blockquote p,html.lang-ko .intro .lede{font-style:normal}
+html.lang-ko .index-list .when,html.lang-ko .index-list .where{letter-spacing:.04em}
+
 /* ---------- layout ---------- */
 .wrap{width:min(100% - 2.75rem,var(--wrap));margin-inline:auto}
 .narrow{width:min(100% - 2.75rem,var(--narrow));margin-inline:auto}
@@ -52,9 +76,9 @@ section{display:block}
 .header-inner{width:min(100% - 2.75rem,var(--wrap));margin-inline:auto;padding:.95rem 0 .25rem;text-align:center}
 .brand{
   display:inline-block;text-decoration:none;
-  font:400 .82rem/1.4 var(--label);
-  letter-spacing:.34em;text-transform:uppercase;color:var(--ink);
-  padding-left:.34em;
+  font:500 .95rem/1.4 var(--display);
+  letter-spacing:.3em;text-transform:uppercase;color:var(--ink);
+  padding-left:.3em;
 }
 .brand .dot{color:var(--soft)}
 .brand-sub{
