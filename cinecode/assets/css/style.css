@@ -63,6 +63,7 @@ html.lang-ko .index-list .when,html.lang-ko .index-list .where{letter-spacing:.0
 section{display:block}
 .band{padding-block:clamp(3.25rem,7vw,6rem)}
 .band + .band{padding-top:0}
+.page-head + .band{padding-top:clamp(1.75rem,3.5vw,3rem)}
 .rule{height:1px;background:var(--line);border:0;margin:0}
 
 /* ---------- header ---------- */
@@ -238,6 +239,7 @@ section{display:block}
   letter-spacing:-.015em;margin:0 0 1.2rem;max-width:20ch;
 }
 .page-head .lede{max-width:38rem;color:var(--ink)}
+.page-head .role{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.6;color:var(--muted);margin:0;max-width:34rem}
 .page-head .note{max-width:38rem;color:var(--muted);font-size:1rem}
 
 /* ---------- work detail ---------- */
@@ -270,6 +272,7 @@ section{display:block}
 .work-hero img{width:100%;background:var(--line)}
 
 .prose{font-size:1.06rem;line-height:1.78;color:#242421}
+.prose>*{max-width:42rem}
 .prose p{margin:0 0 1.15rem;max-width:40em}
 .prose p.lead{font:400 clamp(1.2rem,2vw,1.42rem)/1.62 var(--display);color:var(--ink)}
 .prose h2{
